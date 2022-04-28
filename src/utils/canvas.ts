@@ -25,7 +25,7 @@ export const mapShapesToPolygons = (
   }
   shapes.forEach((shape: AnnotationShape) => {
     const polygon = new Konva.Line({
-      id: shape.id,
+      id: (''+shape.id),
       name: KONVA_REFS.shape,
       points: mapCoordinatesToPoints(shape.coordinates, imageBoundingBox),
       closed: true,
